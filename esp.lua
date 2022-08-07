@@ -1,5 +1,6 @@
+
 local localPlayer=game.Players.LocalPlayer
- 
+
 function highlightModel(objObject)
 	for i,v in pairs(objObject:children())do
 		if v:IsA'BasePart'and v.Name~='HumanoidRootPart'then
@@ -16,7 +17,7 @@ function highlightModel(objObject)
 		end
 	end
 end
- 
+
 function unHighlightModel(objObject)
 	for i,v in pairs(objObject:children())do
 		if v:IsA'BasePart' and v:findFirstChild'BoxHandleAdornment' then
@@ -27,7 +28,7 @@ function unHighlightModel(objObject)
 		end
 	end
 end
- 
+
 function sortTeamHighlights(objPlayer)
 	repeat wait() until objPlayer.Character
 	if objPlayer.TeamColor~=localPlayer.TeamColor then
@@ -60,7 +61,7 @@ function sortTeamHighlights(objPlayer)
 		end)
 	end
 end
- 
+
 for i,v in pairs(game.Players:GetPlayers())do
 	v.CharacterAdded:connect(function()
 		sortTeamHighlights(v)
